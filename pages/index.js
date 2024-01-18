@@ -31,7 +31,8 @@ export default function Home() {
               .toLowerCase()
               .includes("yleisövessa");
             if (
-              isUnique && hasCoordinates &&
+              isUnique &&
+              hasCoordinates &&
               isNotKierratyspiste &&
               isNotPysakointialue &&
               isNotYleisovessa
@@ -53,7 +54,19 @@ export default function Home() {
                   placeWithKeyword.imageUrl = imageData.url; // Store the image URL in the place object
                   return placeWithKeyword;
                 });
+            } else {
+              // If the place doesn't have an image, fetch images based on place name
+              return fetch(`https://api.hel.fi/linkedevents/v1/image/?text=${encodeURIComponent(place.name.fi)}`)
+                .then((resp) => resp.json())
+                .then((response) => {
+                  // Filter out images with license value "event_only"
+                  const filteredImages = response.data.filter(image => image.license !== 'event_only');
+            
+                  placeWithKeyword.imageUrls = filteredImages.map(image => image.url); // Store array of image URLs
+                  return placeWithKeyword;
+                });
             }
+
             return Promise.resolve(placeWithKeyword); // If no image, just return the place as is
           });
           return Promise.all(fetchImagePromises);
@@ -69,7 +82,7 @@ export default function Home() {
   const fetchPlaces = () => {
     console.log(places);
     let existingIds = new Set(places.map((place) => place.id)); // Create a set of existing IDs for comparison
-  
+
     places.forEach((place) => {
       let nameKeyword = place.name.fi;
       const urls = [
@@ -77,38 +90,64 @@ export default function Home() {
         `https://api.hel.fi/linkedevents/v1/search/?type=place&input=${nameKeyword}`,
         `https://api.hel.fi/linkedevents/v1/search/?type=place&q=${nameKeyword}`,
       ];
-  
+
       Promise.all(urls.map((url) => fetch(url).then((resp) => resp.json())))
         .then((responses) => {
           const combinedData = responses.flatMap((response) => response.data);
           const filteredData = combinedData.filter((item) => {
             const hasCoordinates = item.position && item.position.coordinates;
-            const isUnique = item.id.startsWith("tprek") && !existingIds.has(item.id);
-            const isNotKierratyspiste = !item.name.fi.toLowerCase().includes("kierrätyspiste");
-            const isNotPysakointialue = !item.name.fi.toLowerCase().includes("pysäköintialue");
-            const isNotYleisovessa = !item.name.fi.toLowerCase().includes("yleisövessa");
-  
-            if (isUnique && hasCoordinates && isNotKierratyspiste && isNotPysakointialue && isNotYleisovessa) {
+            const isUnique =
+              item.id.startsWith("tprek") && !existingIds.has(item.id);
+            const isNotKierratyspiste = !item.name.fi
+              .toLowerCase()
+              .includes("kierrätyspiste");
+            const isNotPysakointialue = !item.name.fi
+              .toLowerCase()
+              .includes("pysäköintialue");
+            const isNotYleisovessa = !item.name.fi
+              .toLowerCase()
+              .includes("yleisövessa");
+
+            if (
+              isUnique &&
+              hasCoordinates &&
+              isNotKierratyspiste &&
+              isNotPysakointialue &&
+              isNotYleisovessa
+            ) {
               existingIds.add(item.id); // Add new IDs to the set
               return true;
             }
             return false;
           });
-  
+
           // Fetch image URLs for filtered data
           const fetchImagePromises = filteredData.map((place) => {
             const placeWithKeyword = { ...place, queryKeyword: nameKeyword };
             if (place.image) {
-              return fetch(`https://api.hel.fi/linkedevents/v1/image/${place.image}`)
+              return fetch(
+                `https://api.hel.fi/linkedevents/v1/image/${place.image}`
+              )
                 .then((resp) => resp.json())
                 .then((imageData) => {
                   placeWithKeyword.imageUrl = imageData.url;
                   return placeWithKeyword;
                 });
+            } else {
+              // If the place doesn't have an image, fetch images based on place name
+              return fetch(`https://api.hel.fi/linkedevents/v1/image/?text=${place.name.fi}`)
+                .then((resp) => resp.json())
+                .then((response) => {
+                  // Filter out images with license value "event_only"
+                  const filteredImages = response.data.filter(image => image.license !== 'event_only');
+            
+                  placeWithKeyword.imageUrls = filteredImages.map(image => image.url); // Store array of image URLs
+                  return placeWithKeyword;
+                });
             }
             return Promise.resolve(placeWithKeyword); // If no image, just return the place as is
           });
-  
+
           return Promise.all(fetchImagePromises);
         })
         .then((placesWithImages) => {
@@ -118,7 +157,6 @@ export default function Home() {
         .catch((error) => console.error(error));
     });
   };
-  
 
   const handleClick = (place) => {
     setSelectedPlaces((prev) => {
@@ -131,50 +169,55 @@ export default function Home() {
     console.log(selectedPlaces);
   };
 
-  
   const saveToJson = () => {
-    fetch('/api/savePlaces', {
-      method: 'POST',
+    fetch("/api/savePlaces", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(selectedPlaces),
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.message);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
     <main className="">
       <div className="flex sticky top-0 z-50 bg-white items-center">
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
-          onClick={fetchDatajson}
-        >
-          Fetch from data.json
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
-          onClick={fetchPlaces}
-        >
-          Fetch from places.name
-        </button>
+        <div className="flex flex-col">
+          <p className="flex justify-center">Linked Events</p>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+            onClick={fetchDatajson}
+          >
+            Fetch linked events from data.json
+          </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+            onClick={fetchPlaces}
+          >
+            Fetch from places.name
+          </button>
+        </div>
         <button
           className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
           onClick={saveToJson}
         >
           Save to JSON
         </button>
-        <p className="border-2 p-2 rounded">Total pois in file: {selectedPlacesData.length}</p>
+        <p className="border-2 p-2 rounded">
+          Total pois in file: {selectedPlacesData.length}
+        </p>
       </div>
-      
+
       <div className="flex flex-wrap gap-3">
         {places.map((place) => (
+          ( place.image || (place.imageUrls.lenght === 0) || place.imageUrl) && (
           <div
             key={place.id}
             onClick={() => handleClick(place)}
@@ -207,8 +250,13 @@ export default function Home() {
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-2">
                 {place.position.coordinates.join(", ")}
               </span>
+
+              {place.imageUrls?.map((url, index) => (
+                <p key={index}><img src={url} /></p>
+              ))}
             </div>
           </div>
+          )
         ))}
       </div>
     </main>

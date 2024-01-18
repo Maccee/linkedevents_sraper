@@ -17649,5 +17649,385 @@
     "score": 3.150814,
     "queryKeyword": "Karhu",
     "imageUrl": "https://www.hel.fi/static/taimu/Kuvat/veistokset/pacius_new.jpg"
+  },
+  {
+    "id": "tprek:43156",
+    "data_source": "tprek",
+    "publisher": "ahjo:u021600",
+    "divisions": [
+      {
+        "type": "muni",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki",
+        "municipality": null,
+        "name": {
+          "fi": "Helsinki",
+          "sv": "Helsingfors"
+        }
+      },
+      {
+        "type": "district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/peruspiiri:mellunkylä",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mellunkylä",
+          "sv": "Mellungsby"
+        }
+      },
+      {
+        "type": "sub_district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/osa-alue:kontula",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Kontula",
+          "sv": "Gårdsbacka"
+        }
+      },
+      {
+        "type": "neighborhood",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/kaupunginosa:mellunkylä",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mellunkylä",
+          "sv": "Mellungsby"
+        }
+      }
+    ],
+    "created_time": null,
+    "last_modified_time": "2020-05-28T09:09:19.795089Z",
+    "custom_data": null,
+    "email": "helsinginmikael.srk@evl.fi",
+    "contact_type": null,
+    "address_region": null,
+    "postal_code": "00940",
+    "post_office_box_num": null,
+    "address_country": null,
+    "deleted": false,
+    "has_upcoming_events": false,
+    "n_events": 23,
+    "image": 64559,
+    "parent": null,
+    "replaced_by": null,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        25.087687,
+        60.235626
+      ]
+    },
+    "description": null,
+    "info_url": {
+      "fi": "https://www.helsinginseurakunnat.fi/mikaelinkirkko.html.stx",
+      "sv": "https://www.helsinginseurakunnat.fi/mikaelinkirkko.html.stx",
+      "en": "https://www.helsinginseurakunnat.fi/mikaelinkirkko.html.stx"
+    },
+    "name": {
+      "fi": "Mikaelinkirkko"
+    },
+    "street_address": {
+      "fi": "Emännänpolku 1",
+      "sv": "Husmorsstigen 1",
+      "en": "Emännänpolku 1"
+    },
+    "telephone": {
+      "fi": "+358 9 2340 4820"
+    },
+    "address_locality": {
+      "fi": "Helsinki",
+      "sv": "Helsingfors",
+      "en": "Helsinki"
+    },
+    "@id": "https://api.hel.fi/linkedevents/v1/place/tprek:43156/",
+    "@context": "http://schema.org",
+    "@type": "Place",
+    "queryKeyword": "kirkko",
+    "imageUrl": "https://www.helsinginseurakunnat.fi/material/images/Lt4VtBfOp/mikaelinkirkko.jpg"
+  },
+  {
+    "id": "tprek:23189",
+    "data_source": "tprek",
+    "publisher": "ahjo:u021600",
+    "divisions": [
+      {
+        "type": "muni",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki",
+        "municipality": null,
+        "name": {
+          "fi": "Helsinki",
+          "sv": "Helsingfors"
+        }
+      },
+      {
+        "type": "district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/peruspiiri:kulosaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Kulosaari",
+          "sv": "Brändö"
+        }
+      },
+      {
+        "type": "sub_district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/osa-alue:mustikkamaa-korkeasaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mustikkamaa-Korkeasaari",
+          "sv": "Blåbärslandet-Högholmen"
+        }
+      },
+      {
+        "type": "neighborhood",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/kaupunginosa:mustikkamaa-korkeasaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mustikkamaa-Korkeasaari",
+          "sv": "Blåbärslandet-Högholmen"
+        }
+      }
+    ],
+    "created_time": null,
+    "last_modified_time": "2021-07-08T10:09:39.386870Z",
+    "custom_data": null,
+    "email": null,
+    "contact_type": null,
+    "address_region": null,
+    "postal_code": "00570",
+    "post_office_box_num": null,
+    "address_country": null,
+    "deleted": false,
+    "has_upcoming_events": false,
+    "n_events": 0,
+    "image": 71749,
+    "parent": null,
+    "replaced_by": null,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        24.983746,
+        60.17497
+      ]
+    },
+    "description": {
+      "fi": "Valtioneuvos J.J. Pippingsköldin perikunta lahjoitti Pukki-veistoksen Helsingin kaupungille 1892. Veistos on alunperin ostettu Pariisin 1889 maailmannäyttelystä. Teoksen materiaali on pronssia ja se edustaa viime vuosisadan realistista veistostyyliä.\nTaiteilija Constantino Pandiani on syntynyt Milanossa 1837. Teos ei kuulu HAM Helsingin taidemuseon kokoelmiin.",
+      "sv": "Getabocken framför Högholmens restaurang är en gåva till Helsingfors stad från statsrådet J.J. Pippingskölds arvingar år 1892. Getabocken inköptes på världsutställningen i Paris 1889. Verket är gjutet i brons och representerar 1800-talets realistiska bildhuggarkonst. Konstnären Constantino Pandiani föddes i Milano i Italien år 1837. Verket ingår inte i HAM Helsingfors konstmuseums samling.",
+      "en": "The work was donated by the estate of the Councillor of State J.J. Pippingsköld to the city of Helsinki. It was originally purchased at the Paris World Fair in 1889. The bronze piece is a representative of 19th century realistical style. It seems that the artist's only intention was to show how even such an ordinary animal is elevated when it is portrayed in bronze. The work doesn't belong to the collections of the Helsinki Art Museum."
+    },
+    "info_url": {
+      "fi": "https://www.hamhelsinki.fi/sculpture/pukki-constantino-pandiani/",
+      "sv": "https://www.hamhelsinki.fi/sv/sculpture/pukki-constantino-pandiani/",
+      "en": "https://www.hamhelsinki.fi/en/sculpture/pukki-constantino-pandiani/"
+    },
+    "name": {
+      "fi": "Pukki",
+      "sv": "Getabock",
+      "en": "Pukki / Buck"
+    },
+    "street_address": {
+      "fi": "Korkeasaari, ravintolan edusta",
+      "sv": "Högholmen, ravintolan edusta",
+      "en": "Korkeasaari, ravintolan edusta"
+    },
+    "telephone": null,
+    "address_locality": {
+      "fi": "Helsinki",
+      "sv": "Helsingfors",
+      "en": "Helsinki"
+    },
+    "@id": "https://api.hel.fi/linkedevents/v1/place/tprek:23189/",
+    "@context": "http://schema.org",
+    "@type": "Place",
+    "queryKeyword": "korkeasaari",
+    "imageUrl": "https://www.hel.fi/static/taimu/Kuvat/veistokset/pukki2.jpg"
+  },
+  {
+    "id": "tprek:57143",
+    "data_source": "tprek",
+    "publisher": "ahjo:u021600",
+    "divisions": [
+      {
+        "type": "muni",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki",
+        "municipality": null,
+        "name": {
+          "fi": "Helsinki",
+          "sv": "Helsingfors"
+        }
+      },
+      {
+        "type": "district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/peruspiiri:kulosaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Kulosaari",
+          "sv": "Brändö"
+        }
+      },
+      {
+        "type": "sub_district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/osa-alue:mustikkamaa-korkeasaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mustikkamaa-Korkeasaari",
+          "sv": "Blåbärslandet-Högholmen"
+        }
+      },
+      {
+        "type": "neighborhood",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/kaupunginosa:mustikkamaa-korkeasaari",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Mustikkamaa-Korkeasaari",
+          "sv": "Blåbärslandet-Högholmen"
+        }
+      }
+    ],
+    "created_time": null,
+    "last_modified_time": "2019-01-16T11:10:20.465869Z",
+    "custom_data": null,
+    "email": null,
+    "contact_type": null,
+    "address_region": null,
+    "postal_code": "00570",
+    "post_office_box_num": null,
+    "address_country": null,
+    "deleted": false,
+    "has_upcoming_events": false,
+    "n_events": 0,
+    "image": 50054,
+    "parent": null,
+    "replaced_by": null,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        24.984728,
+        60.17069
+      ]
+    },
+    "description": {
+      "fi": "Hylkysaari sijaitsee Korkeasaaren eteläpuolella Kruunuvuorenselällä. Saari on yhdistetty kahdella maapenkereellä Korkeasaareen. Hylkysaari kuuluu Helsingin 19. kaupunginosaan Mustikkamaa-Korkeasaari.\nSaaressa on ollut 1800-luvulla huvilaelämää. Luotsiasema toimi Hylkysaaressa 1960-luvulle asti. Myöhemmin siellä oli Suomen merimuseo ennen kuin se vuonna 2007 siirrettiin Kotkaan."
+    },
+    "info_url": null,
+    "name": {
+      "fi": "Hylkysaari, P 60° 10,325' ja I 24° 59,473'",
+      "sv": "Vrakholmen, N 60° 10,325' och E 24° 59,473'",
+      "en": "Hylkysaari, N 60° 10,325' and E 24° 59,473'"
+    },
+    "street_address": {
+      "fi": "Hylkysaari",
+      "sv": "Vrakholmen",
+      "en": "Hylkysaari"
+    },
+    "telephone": null,
+    "address_locality": {
+      "fi": "Helsinki",
+      "sv": "Helsingfors",
+      "en": "Helsinki"
+    },
+    "@id": "https://api.hel.fi/linkedevents/v1/place/tprek:57143/",
+    "@context": "http://schema.org",
+    "@type": "Place",
+    "resource_type": "place",
+    "score": 9.798897,
+    "queryKeyword": "korkeasaari",
+    "imageUrl": "https://farm1.staticflickr.com/886/41703139824_b2e7a6a2e8_k.jpg"
+  },
+  {
+    "id": "tprek:20643",
+    "data_source": "tprek",
+    "publisher": "ahjo:u021600",
+    "divisions": [
+      {
+        "type": "muni",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki",
+        "municipality": null,
+        "name": {
+          "fi": "Helsinki",
+          "sv": "Helsingfors"
+        }
+      },
+      {
+        "type": "district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/peruspiiri:ullanlinna",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Ullanlinna",
+          "sv": "Ulrikasborg"
+        }
+      },
+      {
+        "type": "sub_district",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/osa-alue:kaartinkaupunki",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Kaartinkaupunki",
+          "sv": "Gardesstaden"
+        }
+      },
+      {
+        "type": "neighborhood",
+        "ocd_id": "ocd-division/country:fi/kunta:helsinki/kaupunginosa:kaartinkaupunki",
+        "municipality": "Helsinki",
+        "name": {
+          "fi": "Kaartinkaupunki",
+          "sv": "Gardesstaden"
+        }
+      }
+    ],
+    "created_time": null,
+    "last_modified_time": "2023-10-31T06:10:01.724234Z",
+    "custom_data": null,
+    "email": "shop@mfa.fi",
+    "contact_type": null,
+    "address_region": null,
+    "postal_code": "00130",
+    "post_office_box_num": null,
+    "address_country": null,
+    "deleted": false,
+    "has_upcoming_events": true,
+    "n_events": 111,
+    "image": null,
+    "parent": null,
+    "replaced_by": null,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        24.947811,
+        60.163136
+      ]
+    },
+    "address_locality": {
+      "fi": "Helsinki",
+      "sv": "Helsingfors",
+      "en": "Helsinki"
+    },
+    "name": {
+      "fi": "Arkkitehtuurimuseo",
+      "sv": "Finlands Arkitekturmuseum",
+      "en": "Museum of Finnish Architecture"
+    },
+    "telephone": {
+      "fi": "+358 4577 310 474"
+    },
+    "description": {
+      "fi": "Arkkitehtuurimuseo tarjoaa moninaisia näkökulmia, keskustelun aiheita ja henkilökohtaisia kokemuksia arkkitehtuurista. Tavoitteena on aktivoida ihmisen yhteys rakennettuun ympäristöön ja tarjota välineitä arkkitehtuurin ymmärtämiseksi. Museossa on esillä koti- ja ulkomaisia vaihtuvia arkkitehtuurinäyttelyitä sekä pysyvä näyttely suomalaisesta arkkitehtuurista. Yleisöä palvelevat lisäksi kirjamyyntipiste, alan erikoiskirjasto ja arkisto. Museo järjestää runsaasti tapahtumia, kuten luentoja, opastuksia ja työpajoja. Ilmainen sisäänpääsy joka kuun viimeisenä tiistaina.",
+      "sv": "Finlands arkitekturmuseum bjuder på ett flertal perspektiv och samtalsämnen samt en personlig kontakt med arkitekturen. Målet är att aktivera människans kontakt med den byggda miljön samt att erbjuda verktyg för att förstå arkitektur. Museet ställer fram både inhemska och utländska utställningar samt en permanent utställning med finsk arkitektur. I museet finns även en bokhandel, ett specialbibliotek samt ett arkiv. Museet ordnar evenemang som föreläsningar, guidningar och verkstäder. Fritt inträde den sista tisdagen varje månad.",
+      "en": "The Museum of Finnish Architecture offers rich new perspectives, discussion openers and meaningful experiences of architecture. The mission is to activate a personal connection with the built environment and provide tools for understanding architecture. The museum offers Finnish and international tourig exhibitions and a permanent exhibition on 19th Century Finnish Architecture. A bookshop, specialized public library and collections are also at your service. The museum organizes a great variety of events including visiting lectures, guided tours and workshops. Free admission on the last Tuesday of every month."
+    },
+    "info_url": {
+      "fi": "https://www.mfa.fi/",
+      "sv": "https://www.mfa.fi/",
+      "en": "https://www.mfa.fi/en/frontpage/"
+    },
+    "street_address": {
+      "fi": "Kasarmikatu 24",
+      "sv": "Kaserngatan 24",
+      "en": "Kasarmikatu 24"
+    },
+    "@id": "https://api.hel.fi/linkedevents/v1/place/tprek:20643/",
+    "@context": "http://schema.org",
+    "@type": "Place",
+    "resource_type": "place",
+    "score": 9.639267,
+    "queryKeyword": "arkkitehti",
+    "imageUrls": []
   }
 ]
